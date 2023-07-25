@@ -31,6 +31,8 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *buff = (*list)->next, *pos = NULL;
 
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
+		return;
 	while (buff != NULL)
 	{
 		pos = buff;
